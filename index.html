@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<title>Poke-Forest</title>
+	<script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+</head>
+<body>
+
+<template is="a-template" element="a-tree" size="1">
+	<a-cylinder height="3" radius="0.3" color="#620"></a-cylinder>
+	<a-cube color="#090" position="0 2 0"></a-cube>
+	<a-cube color="#090" width="0.3" height="1.2" length="0.3" position="0 2 0"></a-cube>
+	<a-cube width="2" length="2" color="#090" position="0 1.5 0"></a-cube>
+	<a-sphere radius="0.8" color="#d00" position="0 1.5 0"></a-cube>
+	
+</template>
+
+<template is="a-template" element="a-forest" size="1">
+<a-tree></a-tree>
+	<a-tree position="3 0 3"></a-tree>
+	<a-tree position="-3 0 3"></a-tree>
+	<a-tree position="3 0 -3"></a-tree>
+	<a-tree position="-3 0 -3"></a-tree>
+</template>
+
+<template is="a-template" element="a-pokeball" size="1">
+	<a-sphere radius="1" color="red" position="0 0.01 0"></a-sphere>
+	<a-sphere radius="1" color="white" position="0 -0.01 0"></a-sphere>
+	<a-cylinder radius="1.01" height="0.14" color="black"></a-cylinder>
+	<a-cylinder radius="0.14" height="0.2" rotation="90 0 0" position="0 0 0.931" color="white"></a-cylinder>
+	<a-cylinder radius="0.25" height="0.2" rotation="90 0 0" position="0 0 0.93" color="black"></a-cylinder>
+</template>
+
+<a-scene>
+	<a-pokeball position="0 0 2" rotation="0 20 0"></a-pokeball>
+	<a-forest></a-forest>
+	<a-forest position="10 0 10"</a-forest>
+	<a-forest position="-10 0 10"</a-forest>
+	<a-forest position="10 0 -10"</a-forest>
+	<a-forest position="-10 0 -10"</a-forest>
+	<a-forest position="10 0 0"</a-forest>
+	<a-forest position="-10 0 0"</a-forest>
+	<a-forest position="0 0 10"</a-forest>
+	<a-forest position="0 0 -10"</a-forest>
+	<a-camera position="0 0 6"></a-camera>
+	<a-light color="#cc9" position="100 1 100" intensity="0.4" type="point"></a-light>
+	<a-light color="#cc9" position="-100 1 100" intensity="0.2" type="point"></a-light>
+	<a-light color="#cc9" position="100 1 -100" intensity="0.3" type="point"></a-light>
+	<a-sky color="#000308"></a-sky>
+	<a-plane color="#520" width="100" height="100" rotation="-89 0 0" position="-4 -4 0"></a-plane>
+</a-scene>
+
+</body>
+</html>
